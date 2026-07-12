@@ -4,62 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Namaste Mahjong - 2D Tile Match Game</title>
-    <link href="https://jsdelivr.net" rel="stylesheet">
-
     <style>
-        body { background-color: #1a0f0f; color: #f7fafc; }
+        /* Bulletproof embedded styles for Chromebook compatibility */
+        body { background-color: #1a0f0f; color: #f7fafc; font-family: sans-serif; margin: 0; padding: 0; }
+        header { background: linear-gradient(to bottom, #800020, #1a0f0f); padding: 80px 24px; text-align: center; border-bottom: 4px solid #FFD700; }
+        h1 { color: #FFD700; font-size: 3rem; margin: 0; letter-spacing: 1px; }
+        .tagline { color: #FFA500; font-size: 1.25rem; font-weight: bold; margin-top: 16px; }
+        .desc { color: #cbd5e1; max-w: 500px; margin: 8px auto 0 auto; line-height: 1.5; }
+        .btn-container { mt-8; display: flex; justify-content: center; gap: 16px; margin-top: 32px; flex-wrap: wrap; }
+        .btn { background-color: #000; color: #fff; text-decoration: none; font-weight: bold; padding: 12px 24px; rounded-radius: 8px; border: 1px solid #374151; border-radius: 8px; display: inline-block; }
+        .btn:hover { background-color: #111827; }
+        section { max-w: 1000px; margin: 0 auto; padding: 64px 24px; text-align: center; }
+        h2 { color: #FFD700; font-size: 2rem; margin: 0; }
+        .sec-desc { color: #9ca3af; margin-top: 8px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px; margin-top: 40px; }
+        .card { background-color: #2d1a1a; padding: 16px; border-radius: 12px; border: 1px solid rgba(255, 165, 0, 0.3); }
+        .placeholder { height: 256px; background-color: #1f2937; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #6b7280; }
+        .card h3 { margin-top: 16px; color: #FFA500; font-size: 1.125rem; }
+        footer { background-color: #0f0909; color: #6b7280; text-align: center; padding: 32px; border-top: 1px solid #1f2937; font-size: 0.875rem; }
+        footer a { color: #FFD700; text-decoration: underline; margin: 0 8px; }
+        footer a:hover { color: #FFA500; }
     </style>
 </head>
-<body class="font-sans antialiased">
+<body>
 
     <!-- Hero Section -->
-    <header class="relative bg-gradient-to-b from-[#800020] to-[#1a0f0f] py-20 px-6 text-center border-b-4 border-[#FFD700]">
-        <div class="max-w-3xl mx-auto">
-            <h1 class="text-5xl font-extrabold text-[#FFD700] drop-shadow-md tracking-wide">Namaste Mahjong</h1>
-            <p class="mt-4 text-xl text-[#FFA500] font-medium">An Elegant Indian-Themed 2D Mahjong Solitaire Adventure</p>
-            <p class="mt-2 text-gray-300 max-w-xl mx-auto">Match beautiful, traditionally crafted tiles featuring vibrant Indian motifs, mandalas, and majestic peacocks.</p>
-            
-            <!-- Download Buttons Placeholder -->
-            <div class="mt-8 flex flex-wrap justify-center gap-4">
-                <a href="#" class="bg-black hover:bg-gray-900 text-white font-bold py-3 px-6 rounded-lg shadow-lg border border-gray-700 transition duration-200">
-                    Get it on Google Play
-                </a>
-                <a href="#" class="bg-black hover:bg-gray-900 text-white font-bold py-3 px-6 rounded-lg shadow-lg border border-gray-700 transition duration-200">
-                    Download on the App Store
-                </a>
-            </div>
+    <header>
+        <h1>Namaste Mahjong</h1>
+        <p class="tagline">An Elegant Indian-Themed 2D Mahjong Solitaire Adventure</p>
+        <p class="desc">Match beautiful, traditionally crafted tiles featuring vibrant Indian motifs, mandalas, and majestic peacocks.</p>
+        
+        <div class="btn-container">
+            <a href="#" class="btn">Get it on Google Play</a>
+            <a href="#" class="btn">Download on the App Store</a>
         </div>
     </header>
 
     <!-- Gameplay Preview Section -->
-    <section class="max-w-5xl mx-auto py-16 px-6 text-center">
-        <h2 class="text-3xl font-bold text-[#FFD700]">Experience the Magic</h2>
-        <p class="text-gray-400 mt-2">Clear the board and immerse yourself in thousands of puzzle levels.</p>
+    <section>
+        <h2>Experience the Magic</h2>
+        <p class="sec-desc">Clear the board and immerse yourself in thousands of puzzle levels.</p>
         
-        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-[#2d1a1a] p-4 rounded-xl border border-[#FFA500]/30 shadow-xl">
-                <div class="h-64 bg-gray-800 rounded-lg flex items-center justify-center text-gray-500">[ Screenshot 1 ]</div>
-                <h3 class="mt-4 font-semibold text-lg text-[#FFA500]">Beautiful 2D Artwork</h3>
+        <div class="grid">
+            <div class="card">
+                <div class="placeholder">[ Screenshot 1 ]</div>
+                <h3>Beautiful 2D Artwork</h3>
             </div>
-            <div class="bg-[#2d1a1a] p-4 rounded-xl border border-[#FFA500]/30 shadow-xl">
-                <div class="h-64 bg-gray-800 rounded-lg flex items-center justify-center text-gray-500">[ Screenshot 2 ]</div>
-                <h3 class="mt-4 font-semibold text-lg text-[#FFA500]">Relaxing Gameplay</h3>
+            <div class="card">
+                <div class="placeholder">[ Screenshot 2 ]</div>
+                <h3>Relaxing Gameplay</h3>
             </div>
-            <div class="bg-[#2d1a1a] p-4 rounded-xl border border-[#FFA500]/30 shadow-xl">
-                <div class="h-64 bg-gray-800 rounded-lg flex items-center justify-center text-gray-500">[ Screenshot 3 ]</div>
-                <h3 class="mt-4 font-semibold text-lg text-[#FFA500]">Traditional Themes</h3>
+            <div class="card">
+                <div class="placeholder">[ Screenshot 3 ]</div>
+                <h3>Traditional Themes</h3>
             </div>
         </div>
     </section>
 
     <!-- Footer with connected Links -->
-    <footer class="bg-[#0f0909] text-gray-500 text-center py-8 border-t border-gray-800 text-sm">
+    <footer>
         <p>&copy; 2026 Namaste Mahjong. All rights reserved.</p>
-        <div class="mt-2 space-x-4">
-            <a href="privacy.html" class="hover:text-[#FFA500] underline">Privacy Policy</a>
-            <span class="text-gray-700">|</span>
-            <a href="terms.html" class="hover:text-[#FFA500] underline">Terms & Conditions</a>
-        </div>
+        <p style="margin-top: 8px;">
+            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="terms.html">Terms & Conditions</a>
+        </p>
     </footer>
 
 </body>
