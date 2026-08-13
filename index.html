@@ -7,13 +7,16 @@
     <title>Namaste Mahjong - Indian-Themed Mahjong Solitaire</title>
 
     <style>
+
         body {
             background-color: #1a0f0f;
             color: #f7fafc;
-            font-family: Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             margin: 0;
             padding: 0;
         }
+
+        /* HERO SECTION */
 
         header {
             background: linear-gradient(to bottom, #800020, #1a0f0f);
@@ -34,32 +37,87 @@
             font-size: 1.25rem;
             font-weight: bold;
             margin-top: 16px;
+            margin-bottom: 0;
         }
 
         .desc {
             color: #cbd5e1;
-            max-width: 600px;
-            margin: 8px auto 0 auto;
+            max-width: 650px;
+            margin: 12px auto 0 auto;
             line-height: 1.6;
+            font-size: 1rem;
         }
 
-        .play-button {
-            display: inline-block;
+
+        /* GOOGLE PLAY BUTTON */
+
+        .google-play-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+
             margin-top: 30px;
+            padding: 10px 24px;
+
+            background-color: #000000;
+            color: #ffffff;
+
+            text-decoration: none;
+
+            border: 1px solid #777777;
+            border-radius: 8px;
+
+            min-width: 220px;
+            box-sizing: border-box;
+
+            transition: transform 0.2s ease,
+                        background-color 0.2s ease;
         }
 
-        .play-button img {
-            height: 80px;
-            width: auto;
-            display: block;
+        .google-play-button:hover {
+            background-color: #222222;
+            transform: scale(1.03);
         }
+
+        .play-icon {
+            font-size: 30px;
+            line-height: 1;
+        }
+
+        .play-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            line-height: 1.1;
+        }
+
+        .play-text small {
+            font-size: 10px;
+            font-weight: normal;
+            letter-spacing: 0.5px;
+        }
+
+        .play-text strong {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 3px;
+        }
+
+
+        /* FREE / OFFLINE MESSAGE */
 
         .offline-text {
             color: #FFD700;
             font-size: 18px;
             font-weight: bold;
-            margin-top: 14px;
+            margin-top: 16px;
+            margin-bottom: 0;
+            letter-spacing: 0.5px;
         }
+
+
+        /* GAMEPLAY SECTION */
 
         section {
             max-width: 1000px;
@@ -76,15 +134,26 @@
 
         .sec-desc {
             color: #9ca3af;
-            margin-top: 8px;
+            margin-top: 10px;
+            line-height: 1.5;
         }
+
+
+        /* IMAGE GRID */
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(250px, 1fr)
+            );
+
             gap: 32px;
             margin-top: 40px;
         }
+
+
+        /* GAMEPLAY CARDS */
 
         .card {
             background-color: #2d1a1a;
@@ -95,21 +164,26 @@
 
         .card img {
             width: 100%;
+            height: auto;
             border-radius: 8px;
             display: block;
         }
 
         .card h3 {
             margin-top: 16px;
+            margin-bottom: 4px;
             color: #FFA500;
             font-size: 1.125rem;
         }
+
+
+        /* FOOTER */
 
         footer {
             background-color: #0f0909;
             color: #6b7280;
             text-align: center;
-            padding: 32px;
+            padding: 32px 20px;
             border-top: 1px solid #1f2937;
             font-size: 0.875rem;
         }
@@ -124,7 +198,11 @@
             color: #FFA500;
         }
 
+
+        /* MOBILE */
+
         @media (max-width: 600px) {
+
             header {
                 padding: 60px 20px;
             }
@@ -137,18 +215,41 @@
                 font-size: 1.1rem;
             }
 
-            .play-button img {
-                height: 70px;
+            .desc {
+                font-size: 0.95rem;
+            }
+
+            .google-play-button {
+                min-width: 210px;
+            }
+
+            .offline-text {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 50px 20px;
+            }
+
+            h2 {
+                font-size: 1.8rem;
             }
         }
+
     </style>
 </head>
 
+
 <body>
+
+
+    <!-- HERO SECTION -->
 
     <header>
 
-        <h1>Namaste Mahjong</h1>
+        <h1>
+            Namaste Mahjong
+        </h1>
 
         <p class="tagline">
             An Elegant Indian-Themed 2D Mahjong Solitaire Adventure
@@ -159,17 +260,37 @@
             Indian motifs, mandalas, and majestic peacocks.
         </p>
 
+
+        <!-- GOOGLE PLAY BUTTON -->
+
         <a
-            class="play-button"
+            class="google-play-button"
             href="https://play.google.com/store/apps/details?id=com.rangarajanganeshan.NamasteMahjong"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Get Namaste Mahjong on Google Play"
         >
-            <img
-                src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_color.png"
-                alt="Get it on Google Play"
-            >
+
+            <span class="play-icon">
+                ▶
+            </span>
+
+            <span class="play-text">
+
+                <small>
+                    GET IT ON
+                </small>
+
+                <strong>
+                    Google Play
+                </strong>
+
+            </span>
+
         </a>
+
+
+        <!-- FREE AND OFFLINE MESSAGE -->
 
         <p class="offline-text">
             FREE TO DOWNLOAD &amp; PLAYABLE OFFLINE
@@ -178,44 +299,78 @@
     </header>
 
 
+
+    <!-- GAMEPLAY PREVIEW SECTION -->
+
     <section>
 
-        <h2>Experience the Magic</h2>
+        <h2>
+            Experience the Magic
+        </h2>
 
         <p class="sec-desc">
             Clear the board and immerse yourself in hundreds of puzzle levels.
         </p>
 
+
         <div class="grid">
 
+
+            <!-- SCREEN 1 -->
+
             <div class="card">
+
                 <img
                     src="screen1.jpg"
                     alt="Namaste Mahjong Beautiful 2D Artwork"
                 >
-                <h3>Beautiful 2D Artwork</h3>
+
+                <h3>
+                    Beautiful 2D Artwork
+                </h3>
+
             </div>
 
+
+            <!-- SCREEN 2 -->
+
             <div class="card">
+
                 <img
                     src="screen2.jpg"
                     alt="Namaste Mahjong Relaxing Gameplay"
                 >
-                <h3>Relaxing Gameplay</h3>
+
+                <h3>
+                    Relaxing Gameplay
+                </h3>
+
             </div>
 
+
+            <!-- SCREEN 3 -->
+
             <div class="card">
+
                 <img
                     src="screen3.jpg"
                     alt="Namaste Mahjong Traditional Themes"
                 >
-                <h3>Traditional Themes</h3>
+
+                <h3>
+                    Traditional Themes
+                </h3>
+
             </div>
+
 
         </div>
 
     </section>
 
+
+
+    <!-- FOOTER -->
 
     <footer>
 
@@ -223,13 +378,22 @@
             &copy; 2026 Namaste Mahjong. All rights reserved.
         </p>
 
-        <p>
-            <a href="privacy.html">Privacy Policy</a>
+        <p style="margin-top: 8px;">
+
+            <a href="privacy.html">
+                Privacy Policy
+            </a>
+
             |
-            <a href="terms.html">Terms &amp; Conditions</a>
+
+            <a href="terms.html">
+                Terms &amp; Conditions
+            </a>
+
         </p>
 
     </footer>
+
 
 </body>
 </html>
