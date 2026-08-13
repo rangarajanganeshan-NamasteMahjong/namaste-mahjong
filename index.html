@@ -3,88 +3,245 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Namaste Mahjong - 2D Tile Match Game</title>
+
+    <title>Namaste Mahjong - Indian-Themed Mahjong Solitaire</title>
+
     <style>
-        /* Bulletproof embedded styles for Chromebook compatibility */
-        body { background-color: #1a0f0f; color: #f7fafc; font-family: sans-serif; margin: 0; padding: 0; }
-        header { background: linear-gradient(to bottom, #800020, #1a0f0f); padding: 80px 24px; text-align: center; border-bottom: 4px solid #FFD700; }
-        h1 { color: #FFD700; font-size: 3rem; margin: 0; letter-spacing: 1px; }
-        .tagline { color: #FFA500; font-size: 1.25rem; font-weight: bold; margin-top: 16px; }
-        .desc { color: #cbd5e1; max-w: 500px; margin: 8px auto 0 auto; line-height: 1.5; }
-        .btn-container { mt-8; display: flex; justify-content: center; gap: 16px; margin-top: 32px; flex-wrap: wrap; }
-        .btn { background-color: #000; color: #fff; text-decoration: none; font-weight: bold; padding: 12px 24px; rounded-radius: 8px; border: 1px solid #374151; border-radius: 8px; display: inline-block; }
-        .btn:hover { background-color: #111827; }
-        section { max-w: 1000px; margin: 0 auto; padding: 64px 24px; text-align: center; }
-        h2 { color: #FFD700; font-size: 2rem; margin: 0; }
-        .sec-desc { color: #9ca3af; margin-top: 8px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px; margin-top: 40px; }
-        .card { background-color: #2d1a1a; padding: 16px; border-radius: 12px; border: 1px solid rgba(255, 165, 0, 0.3); }
-        .placeholder { height: 256px; background-color: #1f2937; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #6b7280; }
-        .card h3 { margin-top: 16px; color: #FFA500; font-size: 1.125rem; }
-        footer { background-color: #0f0909; color: #6b7280; text-align: center; padding: 32px; border-top: 1px solid #1f2937; font-size: 0.875rem; }
-        footer a { color: #FFD700; text-decoration: underline; margin: 0 8px; }
-        footer a:hover { color: #FFA500; }
+        body {
+            background-color: #1a0f0f;
+            color: #f7fafc;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(to bottom, #800020, #1a0f0f);
+            padding: 80px 24px;
+            text-align: center;
+            border-bottom: 4px solid #FFD700;
+        }
+
+        h1 {
+            color: #FFD700;
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: 1px;
+        }
+
+        .tagline {
+            color: #FFA500;
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-top: 16px;
+        }
+
+        .desc {
+            color: #cbd5e1;
+            max-width: 600px;
+            margin: 8px auto 0 auto;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        .play-button {
+            display: inline-block;
+            margin-top: 30px;
+        }
+
+        .play-button img {
+            height: 80px;
+            width: auto;
+            display: block;
+        }
+
+        .play-button img:hover {
+            opacity: 0.9;
+        }
+
+        .offline-text {
+            color: #FFD700;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 14px;
+            letter-spacing: 0.5px;
+        }
+
+        section {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 64px 24px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #FFD700;
+            font-size: 2rem;
+            margin: 0;
+        }
+
+        .sec-desc {
+            color: #9ca3af;
+            margin-top: 8px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 32px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background-color: #2d1a1a;
+            padding: 16px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 165, 0, 0.3);
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 8px;
+            display: block;
+        }
+
+        .card h3 {
+            margin-top: 16px;
+            color: #FFA500;
+            font-size: 1.125rem;
+        }
+
+        footer {
+            background-color: #0f0909;
+            color: #6b7280;
+            text-align: center;
+            padding: 32px;
+            border-top: 1px solid #1f2937;
+            font-size: 0.875rem;
+        }
+
+        footer a {
+            color: #FFD700;
+            text-decoration: underline;
+            margin: 0 8px;
+        }
+
+        footer a:hover {
+            color: #FFA500;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 60px 20px;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .tagline {
+                font-size: 1.1rem;
+            }
+
+            .play-button img {
+                height: 70px;
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <!-- Hero Section -->
     <header>
+
         <h1>Namaste Mahjong</h1>
-        <p class="tagline">An Elegant Indian-Themed 2D Mahjong Solitaire Adventure</p>
-        <p class="desc">Match beautiful, traditionally crafted tiles featuring vibrant Indian motifs, mandalas, and majestic peacocks.</p>
-        Namaste Mahjong
-An Elegant Indian-Themed 2D Mahjong Solitaire Adventure
 
-Match beautiful, traditionally crafted tiles featuring vibrant Indian motifs, mandalas, and majestic peacocks.
+        <p class="tagline">
+            An Elegant Indian-Themed 2D Mahjong Solitaire Adventure
+        </p>
 
-<a href="https://play.google.com/store/apps/details?id=com.rangarajanganeshan.NamasteMahjong"
-   target="_blank"
-   rel="noopener noreferrer">
-  <img src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_color.png"
-       alt="Get it on Google Play"
-       style="height: 80px; width: auto;">
-</a>
+        <p class="desc">
+            Match beautiful, traditionally crafted tiles featuring vibrant
+            Indian motifs, mandalas, and majestic peacocks.
+        </p>
 
-<p style="font-weight: bold; font-size: 18px; margin-top: 12px;">
-  FREE TO DOWNLOAD &amp; PLAYABLE OFFLINE
-</p>
-   
+        <!-- Google Play Button -->
+        <a
+            class="play-button"
+            href="https://play.google.com/store/apps/details?id=com.rangarajanganeshan.NamasteMahjong"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Get Namaste Mahjong on Google Play"
+        >
+            <img
+                src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_color.png"
+                alt="Get it on Google Play"
+            >
+        </a>
+
+        <!-- Free & Offline Message -->
+        <p class="offline-text">
+            FREE TO DOWNLOAD &amp; PLAYABLE OFFLINE
+        </p>
+
     </header>
+
 
     <!-- Gameplay Preview Section -->
     <section>
-        <h2>Experience the Magic</h2>
-        <p class="sec-desc">Clear the board and immerse yourself in hundreds of puzzle levels.</p>
-        
-        <div class="grid">
-            <div class="card">
-                <img src="screen1.jpg" alt="Namaste Mahjong Gameplay" style="width:100%; border-radius:8px;">
 
+        <h2>Experience the Magic</h2>
+
+        <p class="sec-desc">
+            Clear the board and immerse yourself in hundreds of puzzle levels.
+        </p>
+
+        <div class="grid">
+
+            <div class="card">
+                <img
+                    src="screen1.jpg"
+                    alt="Namaste Mahjong Beautiful 2D Artwork"
+                >
                 <h3>Beautiful 2D Artwork</h3>
             </div>
-            <div class="card">
-              <img src="screen2.jpg" alt="Namaste Mahjong Gameplay" style="width:100%; border-radius:8px;">
 
+            <div class="card">
+                <img
+                    src="screen2.jpg"
+                    alt="Namaste Mahjong Relaxing Gameplay"
+                >
                 <h3>Relaxing Gameplay</h3>
             </div>
-            <div class="card">
-               <img src="screen3.jpg" alt="Namaste Mahjong Gameplay" style="width:100%; border-radius:8px;">
 
+            <div class="card">
+                <img
+                    src="screen3.jpg"
+                    alt="Namaste Mahjong Traditional Themes"
+                >
                 <h3>Traditional Themes</h3>
             </div>
+
         </div>
+
     </section>
 
-    <!-- Footer with connected Links -->
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Namaste Mahjong. All rights reserved.</p>
-        <p style="margin-top: 8px;">
-            <a href="privacy.html">Privacy Policy</a> | 
-            <a href="terms.html">Terms & Conditions</a>
+
+        <p>
+            &copy; 2026 Namaste Mahjong. All rights reserved.
         </p>
+
+        <p style="margin-top: 8px;">
+            <a href="privacy.html">Privacy Policy</a>
+            |
+            <a href="terms.html">Terms &amp; Conditions</a>
+        </p>
+
     </footer>
 
 </body>
 </html>
-
