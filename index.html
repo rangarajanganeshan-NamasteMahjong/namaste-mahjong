@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,6 +24,9 @@
             padding: 80px 24px;
             text-align: center;
             border-bottom: 4px solid #FFD700;
+
+            /* Allows banners to be positioned relative to the page */
+            position: relative;
         }
 
         h1 {
@@ -202,8 +206,8 @@
         /* SIDE BANNERS */
 
         .side-banner {
-            position: fixed;
-            top: 160px;
+            position: absolute;
+            top: 20px;
             width: 150px;
             z-index: 5;
         }
