@@ -199,6 +199,42 @@
         }
 
 
+        /* SIDE BANNERS */
+
+        .side-banner {
+            position: fixed;
+            top: 160px;
+            width: 150px;
+            z-index: 5;
+        }
+
+        .side-banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+        .left-banner {
+            left: 15px;
+        }
+
+        .right-banner {
+            right: 15px;
+        }
+
+
+        /* HIDE SIDE BANNERS ON SMALLER SCREENS */
+
+        @media (max-width: 1200px) {
+
+            .side-banner {
+                display: none;
+            }
+
+        }
+
+
         /* MOBILE */
 
         @media (max-width: 600px) {
@@ -234,6 +270,7 @@
             h2 {
                 font-size: 1.8rem;
             }
+
         }
 
     </style>
@@ -241,6 +278,28 @@
 
 
 <body>
+
+
+    <!-- SIDE BANNERS -->
+
+    <div class="side-banner left-banner">
+
+        <img
+            src="namaste-mahjong-banner.png"
+            alt="Namaste Mahjong"
+        >
+
+    </div>
+
+
+    <div class="side-banner right-banner">
+
+        <img
+            src="namaste-mahjong-banner.png"
+            alt="Namaste Mahjong"
+        >
+
+    </div>
 
 
     <!-- HERO SECTION -->
