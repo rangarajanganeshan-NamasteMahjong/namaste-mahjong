@@ -1,11 +1,46 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Namaste Mahjong - Indian-Themed Mahjong Solitaire</title>
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <!-- FAVICON -->
+    <link
+        rel="icon"
+        type="image/png"
+        href="Favicon.png"
+    >
+
+    <!-- CANONICAL URL -->
+    <link
+        rel="canonical"
+        href="https://rangarajanganeshan-namastemahjong.github.io/namaste-mahjong/"
+    >
+
+    <!-- SEARCH ENGINE DESCRIPTION -->
+    <meta
+        name="description"
+        content="Namaste Mahjong is an Indian-themed Mahjong Solitaire tile matching game featuring beautiful Indian artwork, relaxing gameplay, and hundreds of puzzle levels."
+    >
+
+    <!-- MOBILE BROWSER THEME COLOR -->
+    <meta
+        name="theme-color"
+        content="#800020"
+    >
+
+    <!-- PAGE TITLE -->
+    <title>
+        Namaste Mahjong - Indian-Themed Mahjong Solitaire
+    </title>
+
 
     <style>
 
@@ -17,38 +52,59 @@
             padding: 0;
         }
 
+
         /* HERO SECTION */
 
         header {
-            background: linear-gradient(to bottom, #800020, #1a0f0f);
+            background: linear-gradient(
+                to bottom,
+                #800020,
+                #1a0f0f
+            );
+
             padding: 80px 24px;
+
             text-align: center;
+
             border-bottom: 4px solid #FFD700;
 
-            /* Allows banners to be positioned relative to the page */
             position: relative;
         }
 
+
         h1 {
             color: #FFD700;
+
             font-size: 3rem;
+
             margin: 0;
+
             letter-spacing: 1px;
         }
 
+
         .tagline {
             color: #FFA500;
+
             font-size: 1.25rem;
+
             font-weight: bold;
+
             margin-top: 16px;
+
             margin-bottom: 0;
         }
 
+
         .desc {
             color: #cbd5e1;
+
             max-width: 650px;
+
             margin: 12px auto 0 auto;
+
             line-height: 1.6;
+
             font-size: 1rem;
         }
 
@@ -56,55 +112,83 @@
         /* GOOGLE PLAY BUTTON */
 
         .google-play-button {
+
             display: inline-flex;
+
             align-items: center;
+
             justify-content: center;
+
             gap: 12px;
 
             margin-top: 30px;
+
             padding: 10px 24px;
 
             background-color: #000000;
+
             color: #ffffff;
 
             text-decoration: none;
 
             border: 1px solid #777777;
+
             border-radius: 8px;
 
             min-width: 220px;
+
             box-sizing: border-box;
 
-            transition: transform 0.2s ease,
-                        background-color 0.2s ease;
+            transition:
+                transform 0.2s ease,
+                background-color 0.2s ease;
         }
 
+
         .google-play-button:hover {
+
             background-color: #222222;
+
             transform: scale(1.03);
         }
 
+
         .play-icon {
+
             font-size: 30px;
+
             line-height: 1;
         }
 
+
         .play-text {
+
             display: flex;
+
             flex-direction: column;
+
             align-items: flex-start;
+
             line-height: 1.1;
         }
 
+
         .play-text small {
+
             font-size: 10px;
+
             font-weight: normal;
+
             letter-spacing: 0.5px;
         }
 
+
         .play-text strong {
+
             font-size: 20px;
+
             font-weight: bold;
+
             margin-top: 3px;
         }
 
@@ -112,11 +196,17 @@
         /* FREE / OFFLINE MESSAGE */
 
         .offline-text {
+
             color: #FFD700;
+
             font-size: 18px;
+
             font-weight: bold;
+
             margin-top: 16px;
+
             margin-bottom: 0;
+
             letter-spacing: 0.5px;
         }
 
@@ -124,21 +214,33 @@
         /* GAMEPLAY SECTION */
 
         section {
+
             max-width: 1000px;
+
             margin: 0 auto;
+
             padding: 64px 24px;
+
             text-align: center;
         }
 
+
         h2 {
+
             color: #FFD700;
+
             font-size: 2rem;
+
             margin: 0;
         }
 
+
         .sec-desc {
+
             color: #9ca3af;
+
             margin-top: 10px;
+
             line-height: 1.5;
         }
 
@@ -146,13 +248,17 @@
         /* IMAGE GRID */
 
         .grid {
+
             display: grid;
-            grid-template-columns: repeat(
-                auto-fit,
-                minmax(250px, 1fr)
-            );
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(250px, 1fr)
+                );
 
             gap: 32px;
+
             margin-top: 40px;
         }
 
@@ -160,23 +266,43 @@
         /* GAMEPLAY CARDS */
 
         .card {
+
             background-color: #2d1a1a;
+
             padding: 16px;
+
             border-radius: 12px;
-            border: 1px solid rgba(255, 165, 0, 0.3);
+
+            border: 1px solid
+                rgba(
+                    255,
+                    165,
+                    0,
+                    0.3
+                );
         }
 
+
         .card img {
+
             width: 100%;
+
             height: auto;
+
             border-radius: 8px;
+
             display: block;
         }
 
+
         .card h3 {
+
             margin-top: 16px;
+
             margin-bottom: 4px;
+
             color: #FFA500;
+
             font-size: 1.125rem;
         }
 
@@ -184,21 +310,33 @@
         /* FOOTER */
 
         footer {
+
             background-color: #0f0909;
+
             color: #6b7280;
+
             text-align: center;
+
             padding: 32px 20px;
+
             border-top: 1px solid #1f2937;
+
             font-size: 0.875rem;
         }
 
+
         footer a {
+
             color: #FFD700;
+
             text-decoration: underline;
+
             margin: 0 8px;
         }
 
+
         footer a:hover {
+
             color: #FFA500;
         }
 
@@ -206,24 +344,37 @@
         /* SIDE BANNERS */
 
         .side-banner {
+
             position: absolute;
+
             top: 20px;
+
             width: 150px;
+
             z-index: 5;
         }
 
+
         .side-banner img {
+
             width: 100%;
+
             height: auto;
+
             display: block;
+
             border-radius: 8px;
         }
 
+
         .left-banner {
+
             left: 15px;
         }
 
+
         .right-banner {
+
             right: 15px;
         }
 
@@ -233,6 +384,7 @@
         @media (max-width: 1200px) {
 
             .side-banner {
+
                 display: none;
             }
 
@@ -244,40 +396,56 @@
         @media (max-width: 600px) {
 
             header {
+
                 padding: 60px 20px;
             }
 
+
             h1 {
+
                 font-size: 2.2rem;
             }
 
+
             .tagline {
+
                 font-size: 1.1rem;
             }
 
+
             .desc {
+
                 font-size: 0.95rem;
             }
 
+
             .google-play-button {
+
                 min-width: 210px;
             }
 
+
             .offline-text {
+
                 font-size: 16px;
             }
 
+
             section {
+
                 padding: 50px 20px;
             }
 
+
             h2 {
+
                 font-size: 1.8rem;
             }
 
         }
 
     </style>
+
 </head>
 
 
@@ -290,7 +458,7 @@
 
         <img
             src="namaste-mahjong-banner.png"
-            alt="Namaste Mahjong"
+            alt="Namaste Mahjong Indian-themed Mahjong Solitaire game banner"
         >
 
     </div>
@@ -300,7 +468,7 @@
 
         <img
             src="namaste-mahjong-banner.png"
-            alt="Namaste Mahjong"
+            alt="Namaste Mahjong Indian-themed Mahjong Solitaire game banner"
         >
 
     </div>
@@ -314,13 +482,17 @@
             Namaste Mahjong
         </h1>
 
+
         <p class="tagline">
             An Elegant Indian-Themed 2D Mahjong Solitaire Adventure
         </p>
 
+
         <p class="desc">
-            Match beautiful, traditionally crafted tiles featuring vibrant
-            Indian motifs, mandalas, and majestic peacocks.
+            Match beautiful, traditionally crafted tiles featuring
+            vibrant Indian motifs, mandalas, and majestic peacocks.
+            Enjoy relaxing Mahjong Solitaire gameplay with hundreds
+            of puzzle levels.
         </p>
 
 
@@ -338,11 +510,13 @@
                 ▶
             </span>
 
+
             <span class="play-text">
 
                 <small>
                     GET IT ON
                 </small>
+
 
                 <strong>
                     Google Play
@@ -368,11 +542,13 @@
     <section>
 
         <h2>
-            Experience the Magic
+            Experience the Magic of Namaste Mahjong
         </h2>
 
+
         <p class="sec-desc">
-            Clear the board and immerse yourself in hundreds of puzzle levels.
+            Clear the board, match the tiles, and immerse yourself
+            in hundreds of relaxing Mahjong Solitaire puzzle levels.
         </p>
 
 
@@ -385,14 +561,19 @@
 
                 <img
                     src="screen1.jpg"
-                    alt="Namaste Mahjong Beautiful 2D Artwork"
+                    alt="Namaste Mahjong beautiful Indian-themed 2D artwork"
+                    width="600"
+                    height="1200"
+                    loading="lazy"
                 >
 
+
                 <h3>
-                    Beautiful 2D Artwork
+                    Beautiful Indian Artwork
                 </h3>
 
             </div>
+
 
 
             <!-- SCREEN 2 -->
@@ -401,14 +582,19 @@
 
                 <img
                     src="screen2.jpg"
-                    alt="Namaste Mahjong Relaxing Gameplay"
+                    alt="Namaste Mahjong relaxing Mahjong Solitaire gameplay"
+                    width="600"
+                    height="1200"
+                    loading="lazy"
                 >
 
+
                 <h3>
-                    Relaxing Gameplay
+                    Relaxing Mahjong Gameplay
                 </h3>
 
             </div>
+
 
 
             <!-- SCREEN 3 -->
@@ -417,11 +603,15 @@
 
                 <img
                     src="screen3.jpg"
-                    alt="Namaste Mahjong Traditional Themes"
+                    alt="Namaste Mahjong traditional Indian themes and tiles"
+                    width="600"
+                    height="1200"
+                    loading="lazy"
                 >
 
+
                 <h3>
-                    Traditional Themes
+                    Traditional Indian Themes
                 </h3>
 
             </div>
@@ -441,13 +631,16 @@
             &copy; 2026 Namaste Mahjong. All rights reserved.
         </p>
 
+
         <p style="margin-top: 8px;">
 
             <a href="privacy.html">
                 Privacy Policy
             </a>
 
+
             |
+
 
             <a href="terms.html">
                 Terms &amp; Conditions
@@ -459,4 +652,5 @@
 
 
 </body>
+
 </html>
