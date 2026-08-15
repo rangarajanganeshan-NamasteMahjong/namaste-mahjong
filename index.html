@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,32 +11,97 @@
         content="width=device-width, initial-scale=1.0"
     >
 
+    <!-- ========================================= -->
+    <!-- META PIXEL / DATASET -->
+    <!-- ========================================= -->
+
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {
+            if(f.fbq)return;
+
+            n=f.fbq=function(){
+                n.callMethod ?
+                n.callMethod.apply(n,arguments) :
+                n.queue.push(arguments)
+            };
+
+            if(!f._fbq)f._fbq=n;
+
+            n.push=n;
+            n.loaded=!0;
+            n.version='2.0';
+            n.queue=[];
+
+            t=b.createElement(e);
+            t.async=!0;
+            t.src=v;
+
+            s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)
+
+        }(
+            window,
+            document,
+            'script',
+            'https://connect.facebook.net/en_US/fbevents.js'
+        );
+
+        fbq('init', '1784879286030660');
+
+        fbq('track', 'PageView');
+    </script>
+
+    <noscript>
+        <img
+            height="1"
+            width="1"
+            style="display:none"
+            src="https://www.facebook.com/tr?id=1784879286030660&ev=PageView&noscript=1"
+            alt=""
+        >
+    </noscript>
+
+    <!-- ========================================= -->
+    <!-- END META PIXEL / DATASET -->
+    <!-- ========================================= -->
+
+
     <!-- FAVICON -->
+
     <link
         rel="icon"
         type="image/png"
         href="Favicon.png"
     >
 
+
     <!-- CANONICAL URL -->
+
     <link
         rel="canonical"
         href="https://rangarajanganeshan-namastemahjong.github.io/namaste-mahjong/"
     >
 
+
     <!-- SEARCH ENGINE DESCRIPTION -->
+
     <meta
         name="description"
         content="Namaste Mahjong is an Indian-themed Mahjong Solitaire tile matching game featuring beautiful Indian artwork, relaxing gameplay, and hundreds of puzzle levels."
     >
 
+
     <!-- MOBILE BROWSER THEME COLOR -->
+
     <meta
         name="theme-color"
         content="#800020"
     >
 
+
     <!-- PAGE TITLE -->
+
     <title>
         Namaste Mahjong - Indian-Themed Mahjong Solitaire
     </title>
@@ -504,6 +569,11 @@
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Get Namaste Mahjong on Google Play"
+
+            onclick="fbq('track', 'PlayStoreClick', {
+                content_name: 'Namaste Mahjong',
+                content_type: 'Google Play Button'
+            });"
         >
 
             <span class="play-icon">
@@ -654,3 +724,4 @@
 </body>
 
 </html>
+```
