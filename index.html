@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -174,7 +174,25 @@
         }
 
 
-        /* GOOGLE PLAY BUTTON */
+        /* DOWNLOAD HEADING */
+
+        .download-heading {
+
+            color: #FFD700;
+
+            font-size: 1.35rem;
+
+            font-weight: bold;
+
+            margin-top: 30px;
+
+            margin-bottom: 12px;
+
+            letter-spacing: 0.5px;
+        }
+
+
+        /* GOOGLE PLAY DOWNLOAD BADGE */
 
         .google-play-button {
 
@@ -186,9 +204,9 @@
 
             gap: 12px;
 
-            margin-top: 30px;
+            margin-top: 4px;
 
-            padding: 10px 24px;
+            padding: 12px 28px;
 
             background-color: #000000;
 
@@ -196,17 +214,20 @@
 
             text-decoration: none;
 
-            border: 1px solid #777777;
+            border: 2px solid #ffffff;
 
-            border-radius: 8px;
+            border-radius: 9px;
 
-            min-width: 220px;
+            min-width: 250px;
+
+            min-height: 70px;
 
             box-sizing: border-box;
 
             transition:
                 transform 0.2s ease,
-                background-color 0.2s ease;
+                background-color 0.2s ease,
+                box-shadow 0.2s ease;
         }
 
 
@@ -214,13 +235,24 @@
 
             background-color: #222222;
 
-            transform: scale(1.03);
+            transform: scale(1.04);
+
+            box-shadow:
+                0 0 0 3px rgba(255, 215, 0, 0.35);
+        }
+
+
+        .google-play-button:focus {
+
+            outline: 3px solid #FFD700;
+
+            outline-offset: 4px;
         }
 
 
         .play-icon {
 
-            font-size: 30px;
+            font-size: 34px;
 
             line-height: 1;
         }
@@ -240,7 +272,7 @@
 
         .play-text small {
 
-            font-size: 10px;
+            font-size: 11px;
 
             font-weight: normal;
 
@@ -250,11 +282,11 @@
 
         .play-text strong {
 
-            font-size: 20px;
+            font-size: 22px;
 
             font-weight: bold;
 
-            margin-top: 3px;
+            margin-top: 4px;
         }
 
 
@@ -372,6 +404,34 @@
         }
 
 
+        /* SECOND DOWNLOAD AREA */
+
+        .download-section {
+
+            padding-top: 20px;
+
+            padding-bottom: 70px;
+        }
+
+
+        .download-section h2 {
+
+            margin-bottom: 10px;
+        }
+
+
+        .download-section p {
+
+            color: #cbd5e1;
+
+            margin-top: 0;
+
+            margin-bottom: 18px;
+
+            line-height: 1.5;
+        }
+
+
         /* FOOTER */
 
         footer {
@@ -484,9 +544,33 @@
             }
 
 
+            .download-heading {
+
+                font-size: 1.2rem;
+
+                margin-top: 28px;
+            }
+
+
             .google-play-button {
 
-                min-width: 210px;
+                min-width: 245px;
+
+                min-height: 68px;
+
+                padding: 11px 22px;
+            }
+
+
+            .play-icon {
+
+                font-size: 31px;
+            }
+
+
+            .play-text strong {
+
+                font-size: 21px;
             }
 
 
@@ -539,7 +623,9 @@
     </div>
 
 
+    <!-- ========================================= -->
     <!-- HERO SECTION -->
+    <!-- ========================================= -->
 
     <header>
 
@@ -561,22 +647,32 @@
         </p>
 
 
-        <!-- GOOGLE PLAY BUTTON -->
+        <!-- CLEAR DOWNLOAD MESSAGE -->
+
+        <p class="download-heading">
+            DOWNLOAD NAMASTE MAHJONG
+        </p>
+
+
+        <!-- GOOGLE PLAY DOWNLOAD BUTTON -->
 
         <a
             class="google-play-button"
             href="https://play.google.com/store/apps/details?id=com.rangarajanganeshan.NamasteMahjong"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Get Namaste Mahjong on Google Play"
+            aria-label="Download Namaste Mahjong from Google Play"
 
             onclick="fbq('track', 'PlayStoreClick', {
                 content_name: 'Namaste Mahjong',
-                content_type: 'Google Play Button'
+                content_type: 'Google Play Download Button'
             });"
         >
 
-            <span class="play-icon">
+            <span
+                class="play-icon"
+                aria-hidden="true"
+            >
                 ▶
             </span>
 
@@ -607,7 +703,9 @@
 
 
 
+    <!-- ========================================= -->
     <!-- GAMEPLAY PREVIEW SECTION -->
+    <!-- ========================================= -->
 
     <section>
 
@@ -693,7 +791,71 @@
 
 
 
+    <!-- ========================================= -->
+    <!-- SECOND DOWNLOAD CTA -->
+    <!-- ========================================= -->
+
+    <section class="download-section">
+
+        <h2>
+            Ready to Play?
+        </h2>
+
+
+        <p>
+            Download Namaste Mahjong free from Google Play
+            and start matching beautiful Indian-themed tiles.
+        </p>
+
+
+        <a
+            class="google-play-button"
+            href="https://play.google.com/store/apps/details?id=com.rangarajanganeshan.NamasteMahjong"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Download Namaste Mahjong from Google Play"
+
+            onclick="fbq('track', 'PlayStoreClick', {
+                content_name: 'Namaste Mahjong',
+                content_type: 'Google Play Download Button Bottom'
+            });"
+        >
+
+            <span
+                class="play-icon"
+                aria-hidden="true"
+            >
+                ▶
+            </span>
+
+
+            <span class="play-text">
+
+                <small>
+                    GET IT ON
+                </small>
+
+
+                <strong>
+                    Google Play
+                </strong>
+
+            </span>
+
+        </a>
+
+
+        <p class="offline-text">
+            FREE TO DOWNLOAD &amp; PLAYABLE OFFLINE
+        </p>
+
+    </section>
+
+
+
+    <!-- ========================================= -->
     <!-- FOOTER -->
+    <!-- ========================================= -->
 
     <footer>
 
@@ -724,4 +886,3 @@
 </body>
 
 </html>
-```
