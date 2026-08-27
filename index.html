@@ -88,7 +88,7 @@
 
     <meta
         name="description"
-        content="Namaste Mahjong is an Indian-themed Mahjong Solitaire tile matching game featuring beautiful Indian artwork, relaxing gameplay, and hundreds of puzzle levels."
+        content="Namaste Mahjong is an Indian-themed Mahjong Solitaire tile matching game featuring beautiful Indian artwork, relaxing gameplay, and 200 handcrafted puzzle levels."
     >
 
 
@@ -221,7 +221,7 @@
 
 
         /* ========================================= */
-        /* GOOGLE PLAY DOWNLOAD BUTTON */
+        /* GOOGLE PLAY BUTTON */
         /* ========================================= */
 
         .google-play-button {
@@ -279,6 +279,20 @@
 
 
         /* ========================================= */
+        /* GOOGLE PLAY LOGO */
+        /* ========================================= */
+
+        .google-play-logo {
+
+            width: 42px;
+
+            height: 42px;
+
+            flex-shrink: 0;
+        }
+
+
+        /* ========================================= */
         /* INDUS APPSTORE BUTTON */
         /* ========================================= */
 
@@ -294,13 +308,13 @@
 
             padding: 14px 32px;
 
-            background-color: #800020;
+            background-color: #ffffff;
 
-            color: #ffffff;
+            color: #111111;
 
             text-decoration: none;
 
-            border: 2px solid #FFD700;
+            border: 2px solid #ffffff;
 
             border-radius: 10px;
 
@@ -319,7 +333,7 @@
 
         .indus-appstore-button:hover {
 
-            background-color: #9b0026;
+            background-color: #f3f3f3;
 
             transform: scale(1.04);
 
@@ -337,14 +351,14 @@
 
 
         /* ========================================= */
-        /* INDUS APPSTORE SYMBOL */
+        /* INDUS APPSTORE LOGO */
         /* ========================================= */
 
         .indus-logo {
 
-            width: 38px;
+            width: 44px;
 
-            height: 38px;
+            height: 44px;
 
             display: flex;
 
@@ -354,17 +368,26 @@
 
             flex-shrink: 0;
 
-            background-color: #FFD700;
+            border-radius: 10px;
 
-            color: #800020;
+            background: linear-gradient(
+                135deg,
+                #ff6b00,
+                #ff3d00
+            );
 
-            border-radius: 8px;
+            color: #ffffff;
 
-            font-size: 21px;
+            font-size: 25px;
 
-            font-weight: bold;
+            font-weight: 800;
 
             line-height: 1;
+
+            font-family: Arial, Helvetica, sans-serif;
+
+            box-shadow:
+                0 2px 6px rgba(0,0,0,0.25);
         }
 
 
@@ -384,7 +407,7 @@
         }
 
 
-        .play-text small {
+        .google-play-button .play-text small {
 
             font-size: 12px;
 
@@ -396,7 +419,7 @@
         }
 
 
-        .play-text strong {
+        .google-play-button .play-text strong {
 
             font-size: 23px;
 
@@ -405,6 +428,30 @@
             margin-top: 5px;
 
             color: #ffffff;
+        }
+
+
+        .indus-appstore-button .play-text small {
+
+            font-size: 12px;
+
+            font-weight: bold;
+
+            letter-spacing: 0.4px;
+
+            color: #555555;
+        }
+
+
+        .indus-appstore-button .play-text strong {
+
+            font-size: 23px;
+
+            font-weight: bold;
+
+            margin-top: 5px;
+
+            color: #111111;
         }
 
 
@@ -725,29 +772,31 @@
 
             .google-play-logo {
 
-                width: 35px;
+                width: 38px;
 
-                height: 35px;
+                height: 38px;
             }
 
 
             .indus-logo {
 
-                width: 35px;
+                width: 38px;
 
-                height: 35px;
+                height: 38px;
 
-                font-size: 19px;
+                font-size: 22px;
             }
 
 
-            .play-text small {
+            .google-play-button .play-text small,
+            .indus-appstore-button .play-text small {
 
                 font-size: 11px;
             }
 
 
-            .play-text strong {
+            .google-play-button .play-text strong,
+            .indus-appstore-button .play-text strong {
 
                 font-size: 21px;
             }
@@ -823,17 +872,17 @@
         <p class="desc">
             Match beautiful, traditionally crafted tiles featuring
             vibrant Indian motifs, mandalas, and majestic peacocks.
-            Enjoy relaxing Mahjong Solitaire gameplay with hundreds
-            of puzzle levels.
+            Enjoy relaxing Mahjong Solitaire gameplay with 200
+            handcrafted puzzle levels.
         </p>
 
 
         <!-- ========================================= -->
-        <!-- CLEAR DOWNLOAD INSTRUCTION -->
+        <!-- DOWNLOAD INSTRUCTION -->
         <!-- ========================================= -->
 
         <p class="download-heading">
-            DOWNLOAD NAMASTE MAHJONG FROM YOUR PREFERRED APP STORE
+            CHOOSE YOUR APP STORE TO DOWNLOAD NAMASTE MAHJONG
         </p>
 
 
@@ -844,7 +893,7 @@
         <div class="store-buttons">
 
 
-            <!-- GOOGLE PLAY BUTTON -->
+            <!-- GOOGLE PLAY -->
 
             <a
                 class="google-play-button"
@@ -858,8 +907,6 @@
                     content_type: 'Google Play Download Button Top'
                 });"
             >
-
-                <!-- Google Play style triangle logo -->
 
                 <svg
                     class="google-play-logo"
@@ -893,7 +940,7 @@
                 <span class="play-text">
 
                     <small>
-                        DOWNLOAD ON
+                        GET IT ON
                     </small>
 
                     <strong>
@@ -905,7 +952,9 @@
             </a>
 
 
-            <!-- INDUS APPSTORE BUTTON -->
+            <!-- ========================================= -->
+            <!-- INDUS APPSTORE -->
+            <!-- ========================================= -->
 
             <a
                 class="indus-appstore-button"
@@ -920,9 +969,13 @@
                 });"
             >
 
-                <span class="indus-logo" aria-hidden="true">
+                <span
+                    class="indus-logo"
+                    aria-hidden="true"
+                >
                     I
                 </span>
+
 
                 <span class="play-text">
 
@@ -966,7 +1019,7 @@
 
         <p class="sec-desc">
             Clear the board, match the tiles, and immerse yourself
-            in hundreds of relaxing Mahjong Solitaire puzzle levels.
+            in 200 relaxing Mahjong Solitaire puzzle levels.
         </p>
 
 
@@ -1068,7 +1121,7 @@
         <div class="store-buttons">
 
 
-            <!-- GOOGLE PLAY BUTTON -->
+            <!-- GOOGLE PLAY -->
 
             <a
                 class="google-play-button"
@@ -1082,8 +1135,6 @@
                     content_type: 'Google Play Download Button Bottom'
                 });"
             >
-
-                <!-- Google Play style triangle logo -->
 
                 <svg
                     class="google-play-logo"
@@ -1117,7 +1168,7 @@
                 <span class="play-text">
 
                     <small>
-                        DOWNLOAD ON
+                        GET IT ON
                     </small>
 
                     <strong>
@@ -1129,7 +1180,7 @@
             </a>
 
 
-            <!-- INDUS APPSTORE BUTTON -->
+            <!-- INDUS APPSTORE -->
 
             <a
                 class="indus-appstore-button"
@@ -1144,9 +1195,13 @@
                 });"
             >
 
-                <span class="indus-logo" aria-hidden="true">
+                <span
+                    class="indus-logo"
+                    aria-hidden="true"
+                >
                     I
                 </span>
+
 
                 <span class="play-text">
 
