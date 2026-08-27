@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -201,6 +201,26 @@
 
 
         /* ========================================= */
+        /* STORE BUTTON CONTAINER */
+        /* ========================================= */
+
+        .store-buttons {
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            gap: 16px;
+
+            flex-wrap: wrap;
+
+            margin-top: 4px;
+        }
+
+
+        /* ========================================= */
         /* GOOGLE PLAY DOWNLOAD BUTTON */
         /* ========================================= */
 
@@ -213,8 +233,6 @@
             justify-content: center;
 
             gap: 14px;
-
-            margin-top: 4px;
 
             padding: 14px 32px;
 
@@ -260,21 +278,99 @@
         }
 
 
-        /* GOOGLE PLAY TRIANGLE LOGO */
+        /* ========================================= */
+        /* INDUS APPSTORE BUTTON */
+        /* ========================================= */
 
-        .google-play-logo {
+        .indus-appstore-button {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            gap: 14px;
+
+            padding: 14px 32px;
+
+            background-color: #800020;
+
+            color: #ffffff;
+
+            text-decoration: none;
+
+            border: 2px solid #FFD700;
+
+            border-radius: 10px;
+
+            min-width: 270px;
+
+            min-height: 76px;
+
+            box-sizing: border-box;
+
+            transition:
+                transform 0.2s ease,
+                background-color 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+
+        .indus-appstore-button:hover {
+
+            background-color: #9b0026;
+
+            transform: scale(1.04);
+
+            box-shadow:
+                0 0 0 3px rgba(255, 215, 0, 0.35);
+        }
+
+
+        .indus-appstore-button:focus {
+
+            outline: 3px solid #FFD700;
+
+            outline-offset: 4px;
+        }
+
+
+        /* ========================================= */
+        /* INDUS APPSTORE SYMBOL */
+        /* ========================================= */
+
+        .indus-logo {
 
             width: 38px;
 
             height: 38px;
 
-            display: block;
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
 
             flex-shrink: 0;
+
+            background-color: #FFD700;
+
+            color: #800020;
+
+            border-radius: 8px;
+
+            font-size: 21px;
+
+            font-weight: bold;
+
+            line-height: 1;
         }
 
 
+        /* ========================================= */
         /* BUTTON TEXT */
+        /* ========================================= */
 
         .play-text {
 
@@ -604,9 +700,22 @@
             }
 
 
-            .google-play-button {
+            .store-buttons {
 
-                min-width: 250px;
+                flex-direction: column;
+
+                gap: 12px;
+            }
+
+
+            .google-play-button,
+            .indus-appstore-button {
+
+                width: 100%;
+
+                min-width: 0;
+
+                max-width: 320px;
 
                 min-height: 72px;
 
@@ -619,6 +728,16 @@
                 width: 35px;
 
                 height: 35px;
+            }
+
+
+            .indus-logo {
+
+                width: 35px;
+
+                height: 35px;
+
+                font-size: 19px;
             }
 
 
@@ -714,73 +833,113 @@
         <!-- ========================================= -->
 
         <p class="download-heading">
-            TO DOWNLOAD NAMASTE MAHJONG,<br>
-            CLICK THE GOOGLE PLAY BUTTON BELOW
+            DOWNLOAD NAMASTE MAHJONG FROM YOUR PREFERRED APP STORE
         </p>
 
 
         <!-- ========================================= -->
-        <!-- GOOGLE PLAY BUTTON -->
+        <!-- TOP STORE BUTTONS -->
         <!-- ========================================= -->
 
-        <a
-            class="google-play-button"
-            href="https://play.google.com/store/apps/details?id=com.rangarajanganeshan.NamasteMahjong"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Download Namaste Mahjong from Google Play"
+        <div class="store-buttons">
 
-            onclick="fbq('track', 'PlayStoreClick', {
-                content_name: 'Namaste Mahjong',
-                content_type: 'Google Play Download Button'
-            });"
-        >
 
-            <!-- Google Play style triangle logo -->
+            <!-- GOOGLE PLAY BUTTON -->
 
-            <svg
-                class="google-play-logo"
-                viewBox="0 0 48 48"
-                aria-hidden="true"
+            <a
+                class="google-play-button"
+                href="https://play.google.com/store/apps/details?id=com.rangarajanganeshan.NamasteMahjong"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Download Namaste Mahjong from Google Play"
+
+                onclick="fbq('track', 'PlayStoreClick', {
+                    content_name: 'Namaste Mahjong',
+                    content_type: 'Google Play Download Button Top'
+                });"
             >
 
-                <path
-                    fill="#00D7FF"
-                    d="M5 4.5C4.4 5.1 4 6 4 7.2v33.6c0 1.2.4 2.1 1 2.7L25.2 24 5 4.5z"
-                />
+                <!-- Google Play style triangle logo -->
 
-                <path
-                    fill="#00F076"
-                    d="M31.5 30.3 25.2 24 5 43.5c.8.8 2.1.9 3.3.2l23.2-13.4z"
-                />
+                <svg
+                    class="google-play-logo"
+                    viewBox="0 0 48 48"
+                    aria-hidden="true"
+                >
 
-                <path
-                    fill="#FFCB00"
-                    d="M31.5 17.7 8.3 4.3C7.1 3.6 5.8 3.7 5 4.5L25.2 24l6.3-6.3z"
-                />
+                    <path
+                        fill="#00D7FF"
+                        d="M5 4.5C4.4 5.1 4 6 4 7.2v33.6c0 1.2.4 2.1 1 2.7L25.2 24 5 4.5z"
+                    />
 
-                <path
-                    fill="#FF3B30"
-                    d="m31.5 17.7-6.3 6.3 6.3 6.3 7.7-4.4c2.2-1.3 2.2-3.6 0-4.9l-7.7-4.3z"
-                />
+                    <path
+                        fill="#00F076"
+                        d="M31.5 30.3 25.2 24 5 43.5c.8.8 2.1.9 3.3.2l23.2-13.4z"
+                    />
 
-            </svg>
+                    <path
+                        fill="#FFCB00"
+                        d="M31.5 17.7 8.3 4.3C7.1 3.6 5.8 3.7 5 4.5L25.2 24l6.3-6.3z"
+                    />
+
+                    <path
+                        fill="#FF3B30"
+                        d="m31.5 17.7-6.3 6.3 6.3 6.3 7.7-4.4c2.2-1.3 2.2-3.6 0-4.9l-7.7-4.3z"
+                    />
+
+                </svg>
 
 
-            <span class="play-text">
+                <span class="play-text">
 
-                <small>
-                    DOWNLOAD ON
-                </small>
+                    <small>
+                        DOWNLOAD ON
+                    </small>
+
+                    <strong>
+                        Google Play
+                    </strong>
+
+                </span>
+
+            </a>
 
 
-                <strong>
-                    Google Play
-                </strong>
+            <!-- INDUS APPSTORE BUTTON -->
 
-            </span>
+            <a
+                class="indus-appstore-button"
+                href="https://www.indusappstore.com/apps/casual/namaste-mahjong/com.rangarajanganeshan.NamasteMahjong/?page=details&id=com.rangarajanganeshan.NamasteMahjong"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Get Namaste Mahjong from Indus Appstore"
 
-        </a>
+                onclick="fbq('track', 'IndusAppStoreClick', {
+                    content_name: 'Namaste Mahjong',
+                    content_type: 'Indus Appstore Button Top'
+                });"
+            >
+
+                <span class="indus-logo" aria-hidden="true">
+                    I
+                </span>
+
+                <span class="play-text">
+
+                    <small>
+                        GET IT ON
+                    </small>
+
+                    <strong>
+                        Indus Appstore
+                    </strong>
+
+                </span>
+
+            </a>
+
+
+        </div>
 
 
         <!-- ========================================= -->
@@ -792,7 +951,6 @@
         </p>
 
     </header>
-
 
 
     <!-- ========================================= -->
@@ -835,7 +993,6 @@
             </div>
 
 
-
             <!-- SCREEN 2 -->
 
             <div class="card">
@@ -854,7 +1011,6 @@
                 </h3>
 
             </div>
-
 
 
             <!-- SCREEN 3 -->
@@ -882,7 +1038,6 @@
     </section>
 
 
-
     <!-- ========================================= -->
     <!-- SECOND DOWNLOAD CTA -->
     <!-- ========================================= -->
@@ -896,73 +1051,119 @@
 
         <p>
             Download Namaste Mahjong free from Google Play
-            and start matching beautiful Indian-themed tiles.
+            or Indus Appstore and start matching beautiful
+            Indian-themed tiles.
         </p>
 
 
         <p class="download-heading">
-            CLICK BELOW TO DOWNLOAD
+            CHOOSE YOUR APP STORE
         </p>
 
 
-        <a
-            class="google-play-button"
-            href="https://play.google.com/store/apps/details?id=com.rangarajanganeshan.NamasteMahjong"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Download Namaste Mahjong from Google Play"
+        <!-- ========================================= -->
+        <!-- BOTTOM STORE BUTTONS -->
+        <!-- ========================================= -->
 
-            onclick="fbq('track', 'PlayStoreClick', {
-                content_name: 'Namaste Mahjong',
-                content_type: 'Google Play Download Button Bottom'
-            });"
-        >
+        <div class="store-buttons">
 
-            <!-- Google Play style triangle logo -->
 
-            <svg
-                class="google-play-logo"
-                viewBox="0 0 48 48"
-                aria-hidden="true"
+            <!-- GOOGLE PLAY BUTTON -->
+
+            <a
+                class="google-play-button"
+                href="https://play.google.com/store/apps/details?id=com.rangarajanganeshan.NamasteMahjong"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Download Namaste Mahjong from Google Play"
+
+                onclick="fbq('track', 'PlayStoreClick', {
+                    content_name: 'Namaste Mahjong',
+                    content_type: 'Google Play Download Button Bottom'
+                });"
             >
 
-                <path
-                    fill="#00D7FF"
-                    d="M5 4.5C4.4 5.1 4 6 4 7.2v33.6c0 1.2.4 2.1 1 2.7L25.2 24 5 4.5z"
-                />
+                <!-- Google Play style triangle logo -->
 
-                <path
-                    fill="#00F076"
-                    d="M31.5 30.3 25.2 24 5 43.5c.8.8 2.1.9 3.3.2l23.2-13.4z"
-                />
+                <svg
+                    class="google-play-logo"
+                    viewBox="0 0 48 48"
+                    aria-hidden="true"
+                >
 
-                <path
-                    fill="#FFCB00"
-                    d="M31.5 17.7 8.3 4.3C7.1 3.6 5.8 3.7 5 4.5L25.2 24l6.3-6.3z"
-                />
+                    <path
+                        fill="#00D7FF"
+                        d="M5 4.5C4.4 5.1 4 6 4 7.2v33.6c0 1.2.4 2.1 1 2.7L25.2 24 5 4.5z"
+                    />
 
-                <path
-                    fill="#FF3B30"
-                    d="m31.5 17.7-6.3 6.3 6.3 6.3 7.7-4.4c2.2-1.3 2.2-3.6 0-4.9l-7.7-4.3z"
-                />
+                    <path
+                        fill="#00F076"
+                        d="M31.5 30.3 25.2 24 5 43.5c.8.8 2.1.9 3.3.2l23.2-13.4z"
+                    />
 
-            </svg>
+                    <path
+                        fill="#FFCB00"
+                        d="M31.5 17.7 8.3 4.3C7.1 3.6 5.8 3.7 5 4.5L25.2 24l6.3-6.3z"
+                    />
+
+                    <path
+                        fill="#FF3B30"
+                        d="m31.5 17.7-6.3 6.3 6.3 6.3 7.7-4.4c2.2-1.3 2.2-3.6 0-4.9l-7.7-4.3z"
+                    />
+
+                </svg>
 
 
-            <span class="play-text">
+                <span class="play-text">
 
-                <small>
-                    DOWNLOAD ON
-                </small>
+                    <small>
+                        DOWNLOAD ON
+                    </small>
+
+                    <strong>
+                        Google Play
+                    </strong>
+
+                </span>
+
+            </a>
 
 
-                <strong>
-                    Google Play
-                </strong>
+            <!-- INDUS APPSTORE BUTTON -->
 
-            </span>
+            <a
+                class="indus-appstore-button"
+                href="https://www.indusappstore.com/apps/casual/namaste-mahjong/com.rangarajanganeshan.NamasteMahjong/?page=details&id=com.rangarajanganeshan.NamasteMahjong"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Get Namaste Mahjong from Indus Appstore"
 
-        </a>
+                onclick="fbq('track', 'IndusAppStoreClick', {
+                    content_name: 'Namaste Mahjong',
+                    content_type: 'Indus Appstore Button Bottom'
+                });"
+            >
+
+                <span class="indus-logo" aria-hidden="true">
+                    I
+                </span>
+
+                <span class="play-text">
+
+                    <small>
+                        GET IT ON
+                    </small>
+
+                    <strong>
+                        Indus Appstore
+                    </strong>
+
+                </span>
+
+            </a>
+
+
+        </div>
 
 
         <p class="offline-text">
@@ -970,7 +1171,6 @@
         </p>
 
     </section>
-
 
 
     <!-- ========================================= -->
@@ -1006,3 +1206,4 @@
 </body>
 
 </html>
+```
